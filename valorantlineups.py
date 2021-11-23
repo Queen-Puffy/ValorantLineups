@@ -40,5 +40,8 @@ args = (agent[0][0], map[0][0])
 cur.execute (lineupssql, args) 
 lineups = cur.fetchall()
 print(lineups)
-print(lineups[1][4])
-print("egg")
+print(f'The map is {map[0][1]}!  Your lineups are:')
+for lineup in lineups:
+    print(f'{lineup[4]} - {lineup[1]}')
+
+
